@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="page-content">
+    <div class="site-heading">
+    <h1 class="montserrat-name">About Me</h1>
+    </div>
+<section class="about-section">
+    <div class="about-text">
+    <p> 
+        I'm a writer (journalism, coding, creative writing, etc). I am currently pursuing a Master's degree in Comparative Literature with a certificate in Digtial Humanities from New York University
+        so that I can continue in my interdisciplinary endeavors.
+        I enjoy challenging myself to learn new skills; for example, I built this website from scratch. 
+    </p>
+    <p> 
+        Originally born in McAllen, Texas, which borders Mexico, I've lived in New York City for 10+ years. I recently graduated with my 
+        Bachelor's degree from New York University. I double majored in Journalism and Comparative Literature with a minor in Data Science.
+    </p>
+    <p>
+        Coming from a Mexican and Puerto Rican family, 
+        I've gained a love for learning about Latin American and Carribean Literature. I speak Spanish fluently and French at an advanced
+        intermediate level. I hope to learn Portuguese next! 
+    </p>
+    <p>
+    Reach out at <span class='color-green'>mpaganprishker@gmail.com</span>
+    </p>
+</div>
+<img class="about-image" src="{{ url_for('static', filename='images/beach-camera-montse.png') }}" alt="Montserrat Pagan holds a camera while reporting in City Island, Bronx.">
+</section>
+    
+</div>
+
+{% endblock %}

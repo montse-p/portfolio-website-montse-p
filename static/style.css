@@ -1,0 +1,418 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EBE9E1;
+    font-family: "Merriweather Sans", sans-serif;      
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+.page-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+.site-heading {
+    text-align: center;
+    margin-top: 60px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Hover effect for name title */
+.montserrat-name {
+    color: darkgreen;
+    transition: color 0.5s ease, font 0.5s ease;
+    position: relative;
+    z-index: 1;
+    font-size: 40px;
+  }
+
+  .montserrat-name.active::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-image: url('/static/images/blob.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1; 
+    z-index: -1;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+}
+  
+.montserrat-name.active {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding: 40px;
+    color: black;
+    background-size: contain;
+    background-attachment: local;
+    z-index: 1;
+}
+
+.color-green {
+    color: #79305a;
+}
+
+.color-green.highlight {
+    color: darkgreen;
+}
+
+.portfolio-box{
+    margin: 10px;
+    max-width: 700px;
+    padding:15px 40px;
+    text-align:center;
+    border-radius: 25px;
+    z-index: 3;
+    background-color: #F5F2F0;
+    border: 1px solid darkgreen;
+    overflow: visible;
+    position: relative;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+.wrapper img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.wrapper:empty {
+    display: none;
+}
+
+.container:hover .wrapper{
+    transition: all 0.8s ease;
+    opacity: 1;
+}
+
+.portfolio-item.featured .wrapper,
+.portfolio-item.mini-featured .wrapper {
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-item.featured .container,
+.portfolio-item.mini-featured .container {
+    height: 100%;
+}
+
+.portfolio-item .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-item.standard .wrapper img {
+    max-width: 40%;
+    height: auto;
+    left: 5%;
+    top: 30%;
+}
+
+/* Adapted from MediaQuery_04 Divya Mehra */
+
+/* Using flex for mobile and grid for desktop #portfolio-list */
+    /* I mixed the two a lot to get the shapes that I have */
+
+/* Mobile */
+
+.nav {
+    margin-top: 45px;
+    overflow: hidden;
+    max-height: 0;
+    top:0;
+    right:0;
+    transition: max-height 0.4s ease;
+    z-index: 5;
+    position:fixed;
+    background-color: #F5F2F0;
+    width: 200px;
+    border-radius: 25px;
+    border: 1px solid darkgreen;
+  }
+
+.nav ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.nav li {
+    padding: 10px;
+    border-bottom: 1px solid #e8cecc;
+}
+
+.nav a {
+    color: darkgreen;
+}
+
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+.menu-toggle {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+#portfolio-list {
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+.portfolio-item {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-item.featured,
+.portfolio-item.standard {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+}
+
+.portfolio-item.standard .wrapper {
+    opacity: 0;
+    transform: translateY(130%);
+  }
+
+.nav.open {
+    max-height: 300px;
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+    .wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+        transition: opacity 0.8s ease;
+    }
+
+    .container:hover .wrapper {
+        opacity: 1;
+    }
+
+    .nav {
+        margin-top: 0;
+        padding: 10px 0;
+        right: 10px;
+        top: 0;
+        transform: none;
+        max-height: none;
+        overflow: visible;
+        display: block;
+        background: none;
+        background-color: #EBE9E1;
+        width: 100%;
+        border: none;
+    }
+
+    .nav ul {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
+    }
+  
+    .nav li {
+        border-bottom: none;
+        border: none;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Grids are adapted from line-based placement spanning tracks example by Rachel Andrew https://gridbyexample.com/examples/example5/ */
+    #portfolio-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        list-style: none;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .portfolio-item.featured {
+        grid-column: 1/5;
+        grid-row: 1;
+        min-height: 250px;
+      }
+
+    .portfolio-item.featured .container {
+        font-size: 1.2em;
+        padding: 40px;
+        max-width: 100%;
+    }
+    
+    .portfolio-item.mini-featured .container {
+        font-size: 1em;
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .portfolio-item.mini-featured {
+        grid-column: 2/3;
+    }
+
+    .portfolio-item.mini-featured:nth-child(2) {
+        grid-column: 1/3;
+        grid-row: 2/4;
+        min-height: 200px;
+      }
+      
+    .portfolio-item.mini-featured:nth-child(3) {
+    grid-column: 3/5;
+    grid-row: 2;
+    min-height: 100px;
+    }
+
+    .portfolio-item.mini-featured {
+    grid-column: span 2;
+    }
+    .portfolio-item.standard {
+    grid-column: span 1; 
+    }
+
+    .about-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    .about-image {
+        flex: 0 0 250px;
+        max-width: 250px;
+        height: auto;
+    }
+    
+    .about-text {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .portfolio-item.standard:hover .wrapper {
+        opacity: 1;
+        transform: translateY(130%);
+      }
+
+}
+
+ /* Footer based off of Database Design & Implementation Base Code by David Prager NYU */
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    padding: 15px 0;
+    font-size: 0.8em;
+    background-color: #e8cecc;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+#footerLeft {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 0 10px;
+    width: 300px;
+}
+
+#footerLeft a{
+    padding-top: 12px;
+}
+
+#footerRight {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    width: 200px;
+}
+
+/* Added more code for mobile to make my about section display better on mobile */
+@media (max-width: 767px) {
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        max-width: 60%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+    .portfolio-item.standard .wrapper {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* .tags {
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #444;
+    font-style: italic;
+  } */
