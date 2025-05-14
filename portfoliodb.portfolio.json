@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "680990bde39a04c7d839ae32"
+  },
+  "source": "https://coopersquared.com/2024/05/22/a-texas-nurses-decade-long-battle-over-wastewater/",
+  "date": {
+    "$date": "2024-05-22T04:00:00.000Z"
+  },
+  "publicationName": "CooperSquared",
+  "description": "Stephanie Ryder Morris’ persistent fight against harmful algal blooms in the South San Gabriel River just helped prompt Texas’ strictest pollution permit for an existing wastewater treatment plant.",
+  "category": [
+    "journalism"
+  ],
+  "name": "A Texas nurse’s decade-long battle over wastewater",
+  "image": "texas-nurse-wastewater.png"
+},
+{
+  "_id": {
+    "$oid": "680991d7e39a04c7d839ae34"
+  },
+  "source": "https://coopersquared.com/2023/07/03/african-biotech-company-redefines-global-cancer-research/",
+  "date": {
+    "$date": "2023-07-03T04:00:00.000Z"
+  },
+  "publicationName": "CooperSquared",
+  "category": [
+    "journalism"
+  ],
+  "name": "African biotech company redefines global cancer research",
+  "image": "yemaachi-biotech.png"
+},
+{
+  "_id": {
+    "$oid": "68099222e39a04c7d839ae35"
+  },
+  "name": "The Tiny Sea",
+  "source": "https://montse-p.github.io/tiny-sea/",
+  "date": {
+    "$date": "2025-02-27T05:00:00.000Z"
+  },
+  "category": [
+    "creative-writing",
+    "web-dev",
+    "html/css",
+    "coding"
+  ],
+  "description": "A short story about kids playing outside.",
+  "image": "tiny-sea.png"
+},
+{
+  "_id": {
+    "$oid": "68099298e39a04c7d839ae36"
+  },
+  "name": "Montse's Memory Games: A Collection of Pre-teen Projects",
+  "source": "https://montse-p.github.io/visual-collection-montse/",
+  "date": {
+    "$date": "2025-04-08T04:00:00.000Z"
+  },
+  "category": [
+    "multimedia",
+    "short-film",
+    "html/css",
+    "coding",
+    "javascript"
+  ],
+  "description": "A visual collection project that displays my creative work at ages 11-13. This has been created using HTML/CSS/JavaScript",
+  "image": "montse-memory-games.png"
+},
+{
+  "_id": {
+    "$oid": "680a4520918272fdbb2ca698"
+  },
+  "name": "Four Thousand Keys",
+  "publicationName": "The Violet Edition",
+  "date": {
+    "$date": "2024-11-26T05:00:00.000Z"
+  },
+  "description": "Inside Montserrat Pagan’s Student Job as Facility Operations Assistant",
+  "source": "https://medium.com/@nyulibraries/four-thousand-keys-5a753fd41473",
+  "category": [
+    "blog",
+    "library"
+  ],
+  "image": "four-thousand-keys.png"
+}]
